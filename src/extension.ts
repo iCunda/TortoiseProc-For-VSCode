@@ -25,10 +25,11 @@ class TortoiseProc {
             }
         });
 
-        if (paths.join("*"))
-            process.exec(this.path + " /command:" + command + " /path:" + paths.join("*"));
+        let pathsExpr = paths.join("*") || (vscode.window.activeTextEditor && vscode.window.activeTextEditor.document.uri.fsPath);
+        if (pathsExpr)
+            process.exec(this.path + " /command:" + command + " /path:" + pathsExpr);
         
-        console.log(this.path + " /command:" + command + " /path:" + paths.join("*"));
+        console.log(this.path + " /command:" + command + " /path:" + pathsExpr);
         paths.forEach(path => console.log(path));
     }
 
