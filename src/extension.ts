@@ -4,8 +4,7 @@ import * as process from "child_process";
 class TortoiseProc {
     /** 获取TortoiseProc.exe的路径 */
     public get path(): string {
-        const config = vscode.workspace.getConfiguration("TortoiseProc");
-        return config && config.get("path") || "TortoiseProc.exe";
+        return vscode.workspace.getConfiguration().get("TortoiseProc.path") || "TortoiseProc.exe";
     }
     /**
      * 执行TortoiseProc命令
@@ -28,9 +27,6 @@ class TortoiseProc {
         let pathsExpr = paths.join("*") || (vscode.window.activeTextEditor && vscode.window.activeTextEditor.document.uri.fsPath);
         if (pathsExpr)
             process.exec(this.path + " /command:" + command + " /path:" + pathsExpr);
-        
-        console.log(this.path + " /command:" + command + " /path:" + pathsExpr);
-        paths.forEach(path => console.log(path));
     }
 
     private constructor() { }

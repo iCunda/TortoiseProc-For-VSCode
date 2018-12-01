@@ -150,14 +150,15 @@
                     "group": "TortoiseProc@6"
                 }
             ]
-        }
-    },
-    "properties": {
-        "TortoiseProc": {
-            "path": {
-                "type": "string",
-                "default": "",
-                "description": "The path of TortoiseProc.exe."
+        },
+        "configuration": {
+            "title": "TortoiseProc Configuration",
+            "properties": {
+                "TortoiseProc.path": {
+                    "type": "string",
+                    "default": "",
+                    "description": "The path of TortoiseProc.exe."
+                }
             }
         }
     },
