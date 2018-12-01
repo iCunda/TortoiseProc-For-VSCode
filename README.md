@@ -1,4 +1,4 @@
-# TortoiseProc for VSCode README
+# TortoiseProc for VSCode
 
 This is a extension for TortoiseSVN.
 
