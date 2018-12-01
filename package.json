@@ -3,6 +3,12 @@
     "displayName": "TortoiseProc for VSCode",
     "description": "TortoiseProc for VSCode",
     "version": "0.0.1",
+    "publisher": "iCunda",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iCunda/TortoiseProc-For-VSCode"
+    },
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.29.0"
     },
@@ -22,27 +28,27 @@
         "commands": [
             {
                 "command": "TortoiseProc.update",
-                "title": "TortoiseProc:update"
+                "title": "TortoiseProc update"
             },
             {
                 "command": "TortoiseProc.commit",
-                "title": "TortoiseProc:commit"
+                "title": "TortoiseProc commit"
             },
             {
                 "command": "TortoiseProc.log",
-                "title": "TortoiseProc:log"
+                "title": "TortoiseProc log"
             },
             {
                 "command": "TortoiseProc.diff",
-                "title": "TortoiseProc:diff"
+                "title": "TortoiseProc diff"
             },
             {
                 "command": "TortoiseProc.blame",
-                "title": "TortoiseProc:blame"
+                "title": "TortoiseProc blame"
             },
             {
                 "command": "TortoiseProc.revert",
-                "title": "TortoiseProc:revert"
+                "title": "TortoiseProc revert"
             }
         ],
         "keybindings": [
