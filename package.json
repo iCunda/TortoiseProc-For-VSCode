@@ -13,7 +13,8 @@
         "onCommand:TortoiseProc.update",
         "onCommand:TortoiseProc.commit",
         "onCommand:TortoiseProc.log",
-        "onCommand:TortoiseProc.dif",
+        "onCommand:TortoiseProc.diff",
+        "onCommand:TortoiseProc.blame",
         "onCommand:TortoiseProc.revert"
     ],
     "main": "./out/extension",
@@ -32,8 +33,12 @@
                 "title": "TortoiseProc:log"
             },
             {
-                "command": "TortoiseProc.dif",
-                "title": "TortoiseProc:dif"
+                "command": "TortoiseProc.diff",
+                "title": "TortoiseProc:diff"
+            },
+            {
+                "command": "TortoiseProc.blame",
+                "title": "TortoiseProc:blame"
             },
             {
                 "command": "TortoiseProc.revert",
@@ -43,56 +48,106 @@
         "keybindings": [
             {
                 "command": "TortoiseProc.update",
-                "key": "alt+s, u",
-                "when": "editorTextFocus"
+                "key": "alt+s u"
             },
             {
                 "command": "TortoiseProc.commit",
-                "key": "alt+s, c",
-                "when": "editorTextFocus"
+                "key": "alt+s c"
             },
             {
                 "command": "TortoiseProc.log",
-                "key": "alt+s, c",
-                "when": "editorTextFocus"
+                "key": "alt+s l"
             },
             {
-                "command": "TortoiseProc.dif",
-                "key": "alt+s, d",
-                "when": "editorTextFocus"
+                "command": "TortoiseProc.diff",
+                "key": "alt+s d"
+            },
+            {
+                "command": "TortoiseProc.blame",
+                "key": "alt+s b"
             },
             {
                 "command": "TortoiseProc.revert",
-                "key": "alt+s, r",
-                "when": "editorTextFocus"
+                "key": "alt+s r"
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "when": "editorTextFocus",
                     "command": "TortoiseProc.update",
                     "group": "TortoiseProc@1"
                 },
                 {
-                    "when": "editorTextFocus",
                     "command": "TortoiseProc.commit",
                     "group": "TortoiseProc@2"
                 },
                 {
-                    "when": "editorTextFocus",
                     "command": "TortoiseProc.log",
                     "group": "TortoiseProc@3"
                 },
                 {
-                    "when": "editorTextFocus",
-                    "command": "TortoiseProc.dif",
+                    "command": "TortoiseProc.diff",
                     "group": "TortoiseProc@4"
                 },
                 {
-                    "when": "editorTextFocus",
-                    "command": "TortoiseProc.revert",
+                    "command": "TortoiseProc.blame",
                     "group": "TortoiseProc@5"
+                },
+                {
+                    "command": "TortoiseProc.revert",
+                    "group": "TortoiseProc@6"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "TortoiseProc.update",
+                    "group": "TortoiseProc@1"
+                },
+                {
+                    "command": "TortoiseProc.commit",
+                    "group": "TortoiseProc@2"
+                },
+                {
+                    "command": "TortoiseProc.log",
+                    "group": "TortoiseProc@3"
+                },
+                {
+                    "command": "TortoiseProc.diff",
+                    "group": "TortoiseProc@4"
+                },
+                {
+                    "command": "TortoiseProc.blame",
+                    "group": "TortoiseProc@5"
+                },
+                {
+                    "command": "TortoiseProc.revert",
+                    "group": "TortoiseProc@6"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "TortoiseProc.update",
+                    "group": "TortoiseProc@1"
+                },
+                {
+                    "command": "TortoiseProc.commit",
+                    "group": "TortoiseProc@2"
+                },
+                {
+                    "command": "TortoiseProc.log",
+                    "group": "TortoiseProc@3"
+                },
+                {
+                    "command": "TortoiseProc.diff",
+                    "group": "TortoiseProc@4"
+                },
+                {
+                    "command": "TortoiseProc.blame",
+                    "group": "TortoiseProc@5"
+                },
+                {
+                    "command": "TortoiseProc.revert",
+                    "group": "TortoiseProc@6"
                 }
             ]
         }
